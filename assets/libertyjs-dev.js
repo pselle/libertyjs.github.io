@@ -1106,7 +1106,26 @@ define('libertyjs-dev/index/template', ['exports'], function (exports) {
             var el2 = dom.createTextNode("\n    ");
             dom.appendChild(el1, el2);
             dom.appendChild(el0, el1);
-            var el1 = dom.createTextNode("\n    ");
+            var el1 = dom.createTextNode("\n\n    ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createElement("p");
+            var el2 = dom.createElement("a");
+            dom.setAttribute(el2,"href","https://twitter.com/liberty_js");
+            dom.setAttribute(el2,"class","twitter-follow-button");
+            dom.setAttribute(el2,"data-show-count","false");
+            dom.setAttribute(el2,"data-size","large");
+            dom.setAttribute(el2,"data-dnt","true");
+            var el3 = dom.createTextNode("Follow @liberty_js");
+            dom.appendChild(el2, el3);
+            dom.appendChild(el1, el2);
+            var el2 = dom.createTextNode("\n");
+            dom.appendChild(el1, el2);
+            var el2 = dom.createElement("script");
+            var el3 = dom.createTextNode("!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');");
+            dom.appendChild(el2, el3);
+            dom.appendChild(el1, el2);
+            dom.appendChild(el0, el1);
+            var el1 = dom.createTextNode("\n\n    ");
             dom.appendChild(el0, el1);
             var el1 = dom.createElement("div");
             dom.setAttribute(el1,"class","google-maps");
@@ -5503,7 +5522,7 @@ catch(err) {
 if (runningTests) {
   require("libertyjs-dev/tests/test-helper");
 } else {
-  require("libertyjs-dev/app")["default"].create({"name":"libertyjs-dev","version":"0.0.0.15ac5f50"});
+  require("libertyjs-dev/app")["default"].create({"name":"libertyjs-dev","version":"0.0.0.defaf66a"});
 }
 
 /* jshint ignore:end */
